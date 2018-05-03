@@ -155,12 +155,12 @@ class ConceptDetectionEvaluator:
             if gt_concepts.strip() == '':
                 gt_concepts = []
             else:
-                gt_concepts = gt_concepts.split(',')
+                gt_concepts = gt_concepts.split(';')
 
             if candidate_concepts.strip() == '':
                 candidate_concepts = []
             else:
-                candidate_concepts = candidate_concepts.split(',')
+                candidate_concepts = candidate_concepts.split(';')
 
             # Manage empty GT concepts (ignore in evaluation)
             if len(gt_concepts) == 0:
