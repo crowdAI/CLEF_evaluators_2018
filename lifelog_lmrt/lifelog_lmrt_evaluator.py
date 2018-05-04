@@ -181,7 +181,7 @@ class LifelogLmrtEvaluator:
                 image_id = predictions[str(topic)][i][0]
                 if image_id in image_cluster:
                     precision += 1
-                    cluster_found[image_cluster[image_id]] = 1
+                    cluster_found[image_cluster[image_id]-1] = 1
             precision = precision / cut_off
             recall = sum(cluster_found) / no_clusters
             if precision + recall > 0:
